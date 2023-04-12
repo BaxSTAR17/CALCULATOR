@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculist</title>
+</head>
+<body>
+    <div class="screen">
+        <div class="calcuInput">0</div>
+        <div class="calcuOutput">
+            <div class="calcuAnswer"></div>
+        </div>
+    </div>
+    <div class="buttonpanel">
+        <div class="buttonpanelrow1">
+            <button class="number" id="one">1</button>
+            <button class="number" id="two">2</button>
+            <button class="number" id="three">3</button>
+            <button class="number" id="four">4</button>
+            <button class="number" id="five">5</button>
+            <button class="operator" id="plus">+</button>
+            <button class="operator" id="minus">-</button>
+            <button class="option" id="xclear">X</button>
+        </div>
+        <div class="buttonpanelrow2">
+            <button class="number" id="six">6</button>
+            <button class="number" id="seven">7</button>
+            <button class="number" id="eight">8</button>
+            <button class="number" id="nine">9</button>
+            <button class="number" id="zero">0</button>
+            <button class="operator" id="multiply">*</button>
+            <button class="operator" id="divide">/</button>
+            <button class="option" id="equals">=</button>
+        </div>
+    </div>
+<style>
+    body {
+        background-color: gray
+    }
+    .screen {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 300px;
+        border-style: ridge;
+        border-color: black;
+        border-width:20px;
+        background-color: lightgray;
+        align-items: center;
+        gap: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius:10px;
+    }
+    .buttonpanel {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        width: 650px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: #52514c;
+        border-style:ridge;
+        border-color:white;
+        border-width:6px;
+        border-radius:50px;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .buttonpanelrow1 > button {
+        height:50px;
+        width:50px;
+        border-style: groove;
+        border-color: lightgray;
+        border-radius: 100px;
+        border-width: 3px;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+    }
+    .buttonpanelrow2 > button {
+        height:50px;
+        width:50px;
+        border-radius: 100px;
+        border-style:groove;
+        border-color:lightgray;
+        border-width: 3px;
+        font-size: 20px;
+        font-weight: 700;
+        color:white;
+    }
+    .number {
+        background-color: #b81a0f;
+    }
+    .operator {
+        background-color: teal;
+    }
+    .option {
+        background-color: orange;
+    }
+    .number:hover {
+        background-color:darkred;
+    }
+    .operator:hover {
+        background-color: darkslategrey;
+    }
+    .option:hover{
+        background-color: darkorange;
+    }
+    .calcuInput {
+        height: 100px;
+        width: 450px;
+        border-style:outset;
+        border-radius:40px;
+        background-color:lightgray;
+        justify-content: center;
+        text-align: right;
+        padding-top:20px;
+        padding-right:10px;
+        font-size:30px;
+        font-weight: 700;
+    }
+    .calcuOutput {
+        display: flex;
+        height: 150px;
+        width: 450px;
+        border-style:inset;
+        border-radius: 40px;
+        background-color: darkgrey;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+        font-weight: 600;
+    }
+    .buttonpanelrow1 > button:active {
+        border-width: 6px;
+    }
+    .buttonpanelrow2 > button:active {
+        border-width: 6px;
+    }
+    .option#xclear {
+        color: darkred;
+        border-color: red;
+        border-width:7px;
+    }
+    .option#xclear:active {
+        border-width: 10px;
+    }
+</style>
+<script src="scripter.js"></script>
+</body>
+</html>
