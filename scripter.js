@@ -49,10 +49,10 @@ function make2ndNumber(){
 }
 
 function createInput3(f){
-    userNum2.push(f.target.textContent)
-    inputter.textContent = `${userNum.join("")} ${userOper} ${encoder2()}`
-    operatorButtons.forEach(operator => operator.removeEventListener("click", createInput2))
-    makeOutputbyEqualsorOper();
+        userNum2.push(f.target.textContent)
+        inputter.textContent = `${userNum.join("")} ${userOper} ${encoder2()}`
+        operatorButtons.forEach(operator => operator.removeEventListener("click", createInput2))
+        makeOutputbyEqualsorOper();
 }
 
 function encoder2(){
@@ -79,11 +79,11 @@ function makeOutputandContinue(g) {
             calcAns = calcNum - calcNum2
             break;
         case "*":
-            calcAns = Math.round(calcNum * calcNum2)
+            calcAns = calcNum * calcNum2
             calcAns = calcAns
             break;
         case "/":
-            calcAns = Math.round(calcNum / calcNum2)
+            calcAns = calcNum / calcNum2
             calcAns = calcAns
             break;
     }
@@ -110,11 +110,11 @@ function makeOutput() {
             outputter.textContent = calcAns.toLocaleString()
             break;
         case "*":
-            calcAns = Math.round(calcNum * calcNum2)
+            calcAns = calcNum * calcNum2
             outputter.textContent = calcAns.toLocaleString()
             break;
         case "/":
-            calcAns = Math.round(calcNum / calcNum2)
+            calcAns = calcNum / calcNum2
             outputter.textContent = calcAns.toLocaleString()
             break;
     }
